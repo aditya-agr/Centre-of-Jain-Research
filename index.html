@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre for Jain Studies | Devi Ahilya Vishwavidyalaya, Indore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS will be in style.css, Tailwind is used for utility classes -->
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="#" class="nav__logo">
+                <!-- Jain Symbol Logo -->
+                <svg class="w-10 h-10 mr-3 text-saffron-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 7h2v2h-2z"/>
+                  <path fill="none" d="M0 0h24v24H0z"/>
+                  <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="font-semibold text-xl">Centre for Jain Studies</span>
+                    <span class="text-xs">Devi Ahilya Vishwavidyalaya, Indore</span>
+                </div>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#admission" class="nav__link">Admission</a></li>
+                    <li><a href="#academics" class="nav__link">Academics</a></li>
+                    <li><a href="#research" class="nav__link">Research</a></li>
+                    <li><a href="#faculties" class="nav__link">Faculties</a></li>
+                    <li><a href="#student-corner" class="nav__link">Student Corner</a></li>
+                </ul>
+            </div>
+            <button id="mobile-menu-button" class="nav__toggle" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Marquee Photos and Announcement Section -->
+        <section class="w-full py-8 md:py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 responsive-container">
+                    <!-- Marquee Photos -->
+                    <div class="lg:col-span-3">
+                        <h2 class="section-title border-l-4 border-saffron-500 pl-4">Glimpses of Our Centre</h2>
+                        <div class="marquee-container">
+                            <div class="marquee-content">
+                                <!-- Duplicate images for seamless loop -->
+                                <img src="https://placehold.co/600x400/FFF2E6/4a2c2a?text=Jain+Temple+Architecture" alt="Jain Temple">
+                                <img src="https://placehold.co/600x400/E6F2FF/4a2c2a?text=Ancient+Manuscripts" alt="Ancient Manuscripts">
+                                <img src="https://placehold.co/600x400/F2E6FF/4a2c2a?text=Scholarly+Debate" alt="Scholarly Debate">
+                                <img src="https://placehold.co/600x400/E6FFF2/4a2c2a?text=Students+in+Library" alt="Students in Library">
+                                <img src="https://placehold.co/600x400/FFFFE6/4a2c2a?text=International+Conference" alt="International Conference">
+                                <img src="https://placehold.co/600x400/FFF2E6/4a2c2a?text=Jain+Temple+Architecture" alt="Jain Temple">
+                                <img src="https://placehold.co/600x400/E6F2FF/4a2c2a?text=Ancient+Manuscripts" alt="Ancient Manuscripts">
+                                <img src="https://placehold.co/600x400/F2E6FF/4a2c2a?text=Scholarly+Debate" alt="Scholarly Debate">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Announcements -->
+                    <div class="lg:col-span-1">
+                         <h2 class="section-title border-l-4 border-green-600 pl-4">Announcements</h2>
+                         <div class="announcement-box">
+                             <ul class="announcement-marquee">
+                                <li class="announcement-item"><p>PhD Admissions Open for 2025-26 Batch.</p><span class="date">Last Date: 30th Nov 2025</span></li>
+                                <li class="announcement-item green"><p>International Seminar on 'Ahimsa in Modern World'.</p><span class="date">15th Oct 2025</span></li>
+                                <li class="announcement-item"><p>Call for papers for 'Jain Studies Journal Vol. V'.</p><span class="date">Deadline: 1st Dec 2025</span></li>
+                                <li class="announcement-item green"><p>Workshop on Prakrit Language and Script.</p><span class="date">Starts 5th Nov 2025</span></li>
+                                <li class="announcement-item"><p>Guest Lecture by Dr. A. K. Singh on Jain Ethics.</p><span class="date">25th Sep 2025</span></li>
+                                <!-- Duplicate items for seamless scroll -->
+                                <li class="announcement-item"><p>PhD Admissions Open for 2025-26 Batch.</p><span class="date">Last Date: 30th Nov 2025</span></li>
+                                <li class="announcement-item green"><p>International Seminar on 'Ahimsa in Modern World'.</p><span class="date">15th Oct 2025</span></li>
+                                <li class="announcement-item"><p>Call for papers for 'Jain Studies Journal Vol. V'.</p><span class="date">Deadline: 1st Dec 2025</span></li>
+                             </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-center mb-8">About The Centre for Jain Studies</h2>
+                <p class="text-center max-w-3xl mx-auto mb-10 leading-relaxed">
+                    The Centre for Jain Studies has been established at Devi Ahilya Vishwavidyalaya, Indore, under the Pradhan Mantri Jan Vikas Karyakram (PMJVK), to provide a dedicated academic platform for the study, research, and dissemination of Jain philosophy, culture, and literature. We aim to advance the preservation and promotion of Jain heritage as an integral part of Indian knowledge traditions, inspiring society to embrace values of non-violence, compassion, and sustainability.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="info-card"><h3>Preserve and Promote Jain Heritage</h3><p>Offering academic programs, publishing research, and hosting events to promote the rich heritage and understanding of Jainism.</p></div>
+                    <div class="info-card"><h3>Contribute to Indian Knowledge System</h3><p>Researching the contribution of Jain Literature in fields like art, philosophy, science, mathematics, and more.</p></div>
+                    <div class="info-card"><h3>Foster Interdisciplinary Research</h3><p>Bringing together scholars to explore Jainism's multifaceted contributions and the scientific validation of its practices.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOD's Message -->
+        <section id="faculties" class="py-12 md:py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-center mb-8">Message from the Head of Department</h2>
+                <div class="hod-card">
+                    <div class="hod-image">
+                        <img src="https://placehold.co/250x250/FF9933/FFFFFF?text=Prof.+Rajnish+Jain" alt="Head of Department, Prof. Rajnish Jain">
+                        <h3>Prof. Rajnish Jain</h3>
+                        <p>Ph.D. (Management), M.B.A.</p>
+                    </div>
+                    <div class="hod-message">
+                        <p class="italic quote">"We are committed to creating a vibrant academic environment where the profound principles of Jainism are explored with scholarly rigor and contemporary relevance."</p>
+                        <p>
+                            With over 36 years of academic experience in teaching, research, and institution building at Devi Ahilya Vishwavidyalaya, and five years in national policy making as the Secretary of the University Grants Commission (UGC), I am honored to lead this Centre. Our vision is to build a hub of excellence that not only preserves ancient wisdom but also demonstrates its application in solving modern challenges. We invite students, scholars, and the community to join us in this enlightening journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Academics Section -->
+        <section id="academics" class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                 <h2 class="section-title mb-4">Programs Offered</h2>
+                 <p class="max-w-2xl mx-auto mb-8">The Centre will offer a range of Short Term, Certificate, Diploma, and Degree Programmes. Our curriculum is designed to provide a deep and comprehensive understanding of Jain studies.</p>
+                 <div class="p-8 bg-saffron-500/10 rounded-lg inline-block">
+                    <h3 class="text-2xl font-bold text-saffron-600">Coming Soon!</h3>
+                    <p class="text-theme-text mt-2">The list of programmes will be announced shortly. Please check back for updates.</p>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto py-12 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="footer-title">Centre for Jain Studies</h3>
+                    <p class="footer-text">Devi Ahilya Vishwavidyalaya, Indore</p>
+                    <p class="footer-text mt-2">Under Pradhan Mantri Jan Vikas Karyakram (PMJVK).</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#academics" class="footer-link">Academics</a></li>
+                        <li><a href="#admission" class="footer-link">Admissions</a></li>
+                        <li><a href="#research" class="footer-link">Research</a></li>
+                        <li><a href="#faculties" class="footer-link">Faculty</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <address class="footer-text not-italic space-y-2">
+                        <p>Devi Ahilya Vishwavidyalaya, Indore (M.P.)</p>
+                        <p>Phone: <a href="tel:+919827737525" class="footer-link">+91 9827737525</a></p>
+                        <p>Email: <a href="mailto:jainstudies@dauniv.ac.in" class="footer-link">jainstudies@dauniv.ac.in</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="footer-title">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="footer-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                        <a href="#" class="footer-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg></a>
+                        <a href="#" class="footer-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.795 2.013 10.148 2 12.315 2z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Centre for Jain Studies, DAVV. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
