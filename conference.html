@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Seminar on Jainism and IKS | Centre for Jain Studies, DAVV</title>
+    <link rel="stylesheet" href="style.css"> <!-- Main theme styles -->
+    <link rel="stylesheet" href="seminar.css"> <!-- Seminar specific styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <!-- Reusing the new header for consistency -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="nav__logo">
+                <img src="images\jainLogo.jpg" alt="Centre for Jain Studies Logo" class="w-12 h-12 md:w-20 md:h-20 mr-3">
+                <div class="logo-text flex flex-col leading-tight">
+                    <span class="font-bold text-lg md:text-2xl">Centre for Jain Studies</span>
+                    <span class="text-[10px] md:text-xs text-gray-500">Under Pradhan Mantri Jan Vikas Karyakram (PMJVK)</span>
+                    <span class="text-xs md:text-sm font-semibold">
+                        Devi Ahilya Vishwavidyalaya, Indore
+                        <br>
+                        <span class="text-[10px] md:text-xs text-gray-500">Accredited NAAC A+ Grade</span>
+                    </span>
+                </div>
+                <img src="images\davv.jpeg" alt="Devi Ahilya Vishwavidyalaya Logo" class="w-12 h-12 md:w-20 md:h-20 ml-3">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#about" class="nav__link">About</a></li>
+                    <li><a href="#registration" class="nav__link">Registration</a></li>
+                    <li><a href="#schedule" class="nav__link">Schedule</a></li>
+                    <li><a href="#speakers" class="nav__link">Speakers</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <button id="mobile-menu-button" class="nav__toggle" aria-label="Toggle navigation menu">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seminar Hero Section -->
+        <section class="seminar-hero">
+            <div class="container text-center hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold">One Day National Seminar</h1>
+                <p class="mt-4 text-2xl md:text-4xl font-light">on</p>
+                <h2 class="mt-2 text-3xl md:text-5xl font-semibold text-saffron-600">“Jainism and Indian Knowledge System”</h2>
+                <p class="mt-6 text-xl font-bold">26th September, 2025</p>
+                <div id="countdown" class="countdown-timer mt-8">
+                    <div><span id="days"></span> Days</div>
+                    <div><span id="hours"></span> Hours</div>
+                    <div><span id="minutes"></span> Minutes</div>
+                    <div><span id="seconds"></span> Seconds</div>
+                </div>
+            </div>
+        </section>
+
+         <!-- About the Seminar Section -->
+        <section class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h2 class="section-title">About the Seminar</h2>
+                <p class="mt-4 leading-relaxed text-lg text-gray-700">
+                    Jainism, one of the most ancient traditions of India, has profoundly enriched the Indian Knowledge System (IKS) through its philosophical depth, ethical teachings, literature, art, and scientific approach to life. The lineage of Jain Acharyas contributed significantly in the various fields of Indian Literature and played a vital role in the upliftment of Indian Society and spreading moral values. This seminar on “Jainism and Indian Knowledge System” aims to explore the contribution of Jain knowledge and culture in shaping the intellectual, social and cultural traditions of India, and its contemporary relevance in building a sustainable, peaceful, and inclusive society.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Sections with alternating images -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-4 space-y-16">
+                <!-- About DAVV -->
+                <div class="about-section">
+                    <div class="about-image">
+                        <img src="https://placehold.co/600x400/E6F2FF/4a2c2a?text=DAVV+Campus" alt="Devi Ahilya Vishwavidyalaya Campus">
+                    </div>
+                    <div class="about-text">
+                        <h2 class="section-title">About Devi Ahilya Vishwavidyalaya</h2>
+                        <p>Established in 1964 as the University of Indore, and later renamed in honor of the great Holkar queen 'Devi Ahilya Bai Holkar', DAVV is a premier state university in Central India. Accredited with an 'A+' grade by NAAC, it stands as a beacon of higher education, research, and innovation. With a sprawling campus and numerous affiliated colleges, the university offers a vast array of programs across multiple disciplines including Technology, Management, Sciences, and Humanities. It is dedicated to fostering an environment of academic excellence and preparing students to become global leaders and socially responsible citizens.</p>
+                    </div>
+                </div>
+                <!-- About Centre for Jain Studies -->
+                <div class="about-section reverse">
+                    <div class="about-image">
+                        <img src="https://placehold.co/600x400/FFF2E6/4a2c2a?text=Jain+Studies+Centre" alt="Centre for Jain Studies">
+                    </div>
+                    <div class="about-text">
+                        <h2 class="section-title">About The Centre for Jain Studies</h2>
+                        <p>The Centre for Jain Studies, established under the Pradhan Mantri Jan Vikas Karyakram (PMJVK), is a nodal centre for academic excellence in Jain philosophy, culture, and literature. Our mission is to advance the study, preservation, and promotion of Jain heritage as an integral part of the Indian Knowledge System. Through rigorous teaching, interdisciplinary research, publications, and community engagement, we seek to inspire individuals and societies to embrace the timeless values of non-violence (Ahimsa), compassion, and sustainability for a peaceful and harmonious world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Themes Section -->
+        <section class="py-12 md:py-20 bg-stone-100/50">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-center mb-10">Seminar Sub-Themes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Theme 1 -->
+                    <div class="theme-card-detailed">
+                        <div class="theme-header">
+                            <h3 class="text-2xl font-bold">Arts, Humanities & Social Sciences</h3>
+                        </div>
+                        <ul class="theme-list">
+                            <li>Values, Ethics, and Logic in Jain Philosophy</li>
+                            <li>Jain Contributions to Culture, Languages, and Literature</li>
+                            <li>Psychology, Economics, and Commerce from a Jain Perspective</li>
+                            <li>The Role of Yoga and Spiritual Traditions in Jainism</li>
+                            <li>Grammar, Art, and Lifestyle in Jain Heritage</li>
+                        </ul>
+                    </div>
+                    <!-- Theme 2 -->
+                    <div class="theme-card-detailed">
+                         <div class="theme-header">
+                            <h3 class="text-2xl font-bold">Science, Technology & Mathematics</h3>
+                        </div>
+                        <ul class="theme-list">
+                            <li>Jain Concepts in Astronomy, Cosmology, and Astrology</li>
+                            <li>Archeology and Design in Jain Architecture</li>
+                            <li>Mathematical Principles in Ancient Jain Texts</li>
+                            <li>Ayurveda, Agriculture, and Food Sciences in Jainism</li>
+                            <li>Insights into Physics, Biology, and Environmental Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section id="speakers" class="py-12 md:py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-center mb-12">Distinguished Guests & Speakers</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Shri Anurag Jain</h3><p>Chief Secretary, Govt. of MP</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Dr. Chandra S. Kumar</h3><p>Secretary, Ministry of Minority Affairs</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Shri Anupam Rajan</h3><p>Addl. Chief Secretary, Higher Education</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Shri Ram Singh</h3><p>Joint Secretary, Ministry of Minority Affairs</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Prof. Renu Jain</h3><p>Former Vice Chancellor, DAVV</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Prof. G. S. Murthy</h3><p>National Coordinator, IKS Division</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Shri H. Sanwala</h3><p>Vice President, Vishwa Hindu Parishad</p></div>
+                    <div class="speaker-card"><img src="https://placehold.co/200x200/EEE/31343C?text=Guest" alt=""><h3>Prof. Prem Suman Jain</h3><p>Retired Professor</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Organizing Committee -->
+        <section class="py-12 md:py-20 bg-stone-100/50">
+             <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title mb-12">Organizing Committee</h2>
+                <div class="organizing-committee">
+                    <div class="committee-member patron">
+                        <img src="https://placehold.co/150x150/EEE/31343C?text=Patron" alt="Patron">
+                        <h3>Prof. Rakesh Singhai</h3>
+                        <p>Hon’ble Vice Chancellor, DAVV</p>
+                        <span>Patron</span>
+                    </div>
+                    <div class="committee-member director">
+                        <img src="https://placehold.co/150x150/EEE/31343C?text=Director" alt="Seminar Director">
+                        <h3>Prof. Rajnish Jain</h3>
+                        <p>Director, CJS, DAVV</p>
+                        <span>Seminar Director</span>
+                    </div>
+                    <div class="committee-member convener">
+                        <img src="https://placehold.co/150x150/EEE/31343C?text=Convener" alt="Convener">
+                        <h3>Prof. Rahul Singhai</h3>
+                        <p>Deputy Director, CJS, DAVV</p>
+                        <span>Convener</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container mx-auto py-12 px-4">
+             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="footer-title">Centre for Jain Studies</h3>
+                    <p class="footer-text">Devi Ahilya Vishwavidyalaya, Indore</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                     <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#academics" class="footer-link">Academics</a></li>
+                        <li><a href="index.html#admission" class="footer-link">Admissions</a></li>
+                        <li><a href="index.html#research" class="footer-link">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <address class="footer-text not-italic space-y-2">
+                        <p>Phone: <a href="tel:+919827737525" class="footer-link">+91 9827737525</a></p>
+                        <p>Email: <a href="mailto:jainstudies@dauniv.ac.in" class="footer-link">jainstudies@dauniv.ac.in</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="footer-title">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                       <a href="#" class="footer-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                       <a href="#" class="footer-link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Centre for Jain Studies, DAVV. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="seminar.js" defer></script>
+</body>
+</html>
+
