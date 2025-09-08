@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CJR | Centre for Jain Studies | DAVV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="container nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="nav__logo" aria-label="Centre for Jain Studies - Home">
+                <img src="images/jainLogo.jpg" alt="Centre for Jain Studies Logo" class="w-12 h-12 md:w-20 md:h-20 mr-3" loading="eager">
+                <div class="logo-text flex flex-col leading-tight">
+                    <span class="font-bold text-lg md:text-2xl">Centre for Jain Studies</span>
+                    <span class="text-[10px] md:text-xs text-gray-500">Under Pradhan Mantri Jan Vikas Karyakram (PMJVK)</span>
+                    <span class="text-xs md:text-sm font-semibold">Devi Ahilya Vishwavidyalaya, Indore</span>
+                </div>
+                <img src="images/davv.jpeg" alt="Devi Ahilya Vishwavidyalaya Logo" class="w-12 h-12 md:w-20 md:h-20 ml-3" loading="eager">
+            </a>
+            <div class="nav__menu" id="nav-menu" role="menubar">
+                <ul class="nav__list" role="none">
+                    <li role="none"><a href="index.html" class="nav__link" role="menuitem" aria-label="Home Page">Home</a></li>
+                    <li role="none" class="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <button class="nav__link dropdown__toggle" aria-haspopup="true" aria-expanded="true" aria-controls="about-submenu">About</button>
+                        <ul class="dropdown__menu" id="about-submenu" role="menu" aria-label="About submenu" style="display:block;">
+                            <li role="none"><a role="menuitem" class="dropdown__item" href="about-university.html">About University</a></li>
+                            <li role="none"><a role="menuitem" class="dropdown__item" href="about-cjr.html">About CJR</a></li>
+                        </ul>
+                    </li>
+                    <li role="none"><a href="admission.html" class="nav__link" role="menuitem" aria-label="Admission Information">Admission</a></li>
+                    <li role="none"><a href="academics.html" class="nav__link" role="menuitem" aria-label="Academic Programs">Academics</a></li>
+                    <li role="none"><a href="research.html" class="nav__link" role="menuitem" aria-label="Research Activities">Research</a></li>
+                    <li role="none"><a href="faculties.html" class="nav__link" role="menuitem" aria-label="Faculty Members">Faculties</a></li>
+                    <li role="none"><a href="student-corner.html" class="nav__link" role="menuitem" aria-label="Student Resources">Student Corner</a></li>
+                </ul>
+            </div>
+            <button id="mobile-menu-button" class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Menu</span>
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h1 class="section-title mb-6">About the Center for Jain Studies (CJS)</h1>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">Jainism is one of the oldest living culture and tradition of India. The Centre for Jain Studies has been established at Devi Ahilya Vishwavidyalaya, Indore, under the Pradhan Mantri Jan Vikas Karyakram (PMJVK), Ministry of Minority Affairs, Government of India, New Delhi, with the objective of providing an academic platform dedicated to the preservation, study, research, and dissemination of Jain philosophy, culture, literature, and allied subjects. It will also serve as a Nodal Centre for various academic, cultural and social activities in line with Jain traditions and heritage.</p>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">The Centre aims to advance the study, preservation, and promotion of Jain philosophy, heritage, and culture, as an integral part of Indian knowledge traditions. It would engage in rigorous teaching, training, research, and advanced studies in Jainism and allied disciplines while establishing interdisciplinary linkages and collaborating with national and global scholars and institutions. Through outreach, dialogue, publications, and community engagement, the Centre seeks to inspire individuals and societies to embrace values of non-violence, compassion, and sustainability—cultivating peace, harmony, and meaningful living.</p>
+
+                <h2 class="section-title mt-12 mb-4">Vision</h2>
+                <p class="text-lg leading-relaxed text-gray-700">To preserve, promote and enhance Jain Philosophy, Heritage and Culture as an integral part of Indian knowledge traditions for peace, sustainability and harmonious living.</p>
+
+                <h2 class="section-title mt-12 mb-4">Mission</h2>
+                <ul class="requirement-list">
+                    <li>To advance the study, preservation, and dissemination of Jain philosophy, heritage, and culture, as an integral part of Indian knowledge traditions.</li>
+                    <li>To promotes rigorous teaching, training, research, and advanced studies in Jainism and allied disciplines while establishing interdisciplinary linkages and collaborating with national and global scholars and institutions.</li>
+                    <li>To inspire individuals and societies to embrace values of non-violence, compassion, and sustainability - cultivating peace, harmony, and meaningful living through outreach, dialogue, publications, and community engagement.</li>
+                </ul>
+
+                <h2 class="section-title mt-12 mb-4">Core Activities</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <ul class="requirement-list">
+                        <li>Teaching</li>
+                        <li>Research</li>
+                        <li>Training</li>
+                        <li>Digital Engagement</li>
+                    </ul>
+                    <ul class="requirement-list">
+                        <li>Academic Events</li>
+                        <li>Knowledge Resource Management</li>
+                        <li>Workshops</li>
+                        <li>Publications</li>
+                    </ul>
+                    <ul class="requirement-list">
+                        <li>Exhibition</li>
+                        <li>Collaboration</li>
+                        <li>Community Engagement</li>
+                        <li>Outreach Activities</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title mt-12 mb-4">Thrust Areas</h2>
+                <div class="space-y-4">
+                    <div class="subject-item">
+                        <h3 class="subject-title">Preserve and Promote Jain Heritage and Culture</h3>
+                        <p class="subject-description">Offer academic programs, courses, publishing research, and host national and international academic activities for promoting the heritage and understanding of Jainism.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3 class="subject-title">Contribute to Indian Knowledge System</h3>
+                        <p class="subject-description">Research and studies for contribution of Jain Literature in the fields of art, culture, philosophy, linguistics, literature, spirituality, education, humanities, grammar, ayurveda, science, mathematics, technology, astrology, architecture, astronomy, environment etc., as an integral part of Indian Knowledge System.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3 class="subject-title">Foster Interdisciplinary Research</h3>
+                        <p class="subject-description">Facilitate interdisciplinary research, bringing together scholars from various fields to explore Jainism's multifaceted contribution, validation of Jain practices such as Ahimsa, Aahar, Mantra etc.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3 class="subject-title">Enhance Global Understanding</h3>
+                        <p class="subject-description">Collaborate with national and international scholars and institutions to enhance and disseminate knowledge about Jainism globally.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3 class="subject-title">Support Community Engagement</h3>
+                        <p class="subject-description">Serve as a hub for community engagement, providing a platform for dialogue and collaboration between scholars, practitioners and the general public.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-title mt-12 mb-4">Objectives</h2>
+                <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+                    <li>To promote teaching, research, and advanced studies in Jainism, Jain philosophy, culture, history, literature, Jain Yoga and other allied subjects.</li>
+                    <li>To preserve, document and enhance Knowledge Resources on Jainism for academic and cultural enrichment.</li>
+                    <li>To study the contribution of Jain Literature in different domains of Indian Knowledge System.</li>
+                    <li>To develop interdisciplinary linkages connecting Jain philosophy with modern fields such as ethics, ecology, peace studies, management, and wellness.</li>
+                    <li>To provide Vocational Training – Lifestyle, Health, Craft, Yoga, other skills.</li>
+                    <li>To collaborate with national and global scholars and centres / institutions of Jain Studies and Interdisciplinary areas.</li>
+                    <li>To organize Community Outreach activities and to publish scholarly articles, newsletters, journals, books etc.</li>
+                    <li>To provide an international platform for the advanced studies of Jainism in various contexts.</li>
+                    <li>To conduct seminars, workshops, conferences, academic and extension activities for spreading awareness about Jain values, philosophy, knowledge, practices and their practical applications.</li>
+                    <li>To promote practices of Jain Yoga, meditation, and mindfulness for holistic development and well-being.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container mx-auto py-12 px-4">
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Centre for Jain Studies, DAVV. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <script src="script.js" defer></script>
+</body>
+</html>
+

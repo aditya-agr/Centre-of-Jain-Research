@@ -1,5 +1,16 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 /* CSS Variables for Theming */
 :root {
+    /* Color Palette */
     --bg-color: #fdfaf3; /* Light cream background */
     --text-color: #4a2c2a; /* Deep brown */
     --primary-color: #FF9933; /* Saffron/Orange */
@@ -7,7 +18,41 @@
     --card-bg-color: #ffffff;
     --footer-bg-color: #292524; /* Was stone-800 */
     --footer-text-color: #d6d3d1; /* Was gray-400 */
+    
+    /* Typography */
     --font-family: 'Inter', sans-serif;
+    --font-heading: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    
+    /* Breakpoints */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
 }
 
 body {
@@ -77,6 +122,74 @@ body {
 
 .nav__link:hover {
     color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown__toggle {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dropdown__toggle:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.dropdown__menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    padding: 0.5rem 0;
+    display: none;
+    z-index: 100;
+}
+
+.dropdown.open > .dropdown__menu {
+    display: block;
+}
+
+.dropdown__item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dropdown__item:hover {
+    background-color: rgba(255, 153, 51, 0.08);
+    color: var(--primary-color);
+}
+
+.nav__link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.nav__link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 1px;
 }
 
 .nav__toggle {
@@ -404,7 +517,7 @@ body {
 /* Animations */
 @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-500%); }
+    100% { transform: translateX(-50%); }
 }
 
 @keyframes scroll-up {
@@ -455,5 +568,996 @@ body {
         background: none;
         box-shadow: none;
         padding: 0;
+    }
+}
+
+/* New Section Styles */
+
+/* Research Section */
+.research-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--primary-color);
+}
+
+.research-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.research-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--spacing-lg);
+    background-color: rgba(255, 153, 51, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.research-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.research-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.research-text {
+    color: #574544;
+    line-height: 1.6;
+}
+
+/* Admission Section */
+.admission-info {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.admission-step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background-color: rgba(255, 153, 51, 0.05);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition-normal);
+}
+
+.admission-step:hover {
+    background-color: rgba(255, 153, 51, 0.1);
+    transform: translateX(8px);
+}
+
+.step-number {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.step-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.step-text {
+    color: #574544;
+    line-height: 1.6;
+}
+
+/* Student Corner Section */
+.student-resource-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.student-resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.resource-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--spacing-lg);
+    background-color: rgba(19, 136, 8, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+.resource-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.resource-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.resource-text {
+    color: #574544;
+    line-height: 1.6;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .research-card,
+    .student-resource-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .admission-step {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .step-number {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 90%;
+    }
+    
+    .research-card,
+    .student-resource-card {
+        padding: var(--spacing-xl);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .nav__toggle,
+    .marquee-container,
+    .announcement-box {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .section-title {
+        color: black !important;
+        page-break-after: avoid;
+    }
+    
+    .research-card,
+    .student-resource-card,
+    .admission-step {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --text-color: #000000;
+        --primary-color: #ff6600;
+        --secondary-color: #006600;
+        --bg-color: #ffffff;
+    }
+    
+    .research-card,
+    .student-resource-card,
+    .admission-step {
+        border: 2px solid var(--text-color);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .marquee-content,
+    .marquee-content-about,
+    .announcement-marquee {
+        animation: none !important;
+    }
+}
+
+/* Focus Management for Accessibility */
+.focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    z-index: 1000;
+    transition: top var(--transition-normal);
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Additional Styles for Admission Page */
+
+/* Requirement Cards */
+.requirement-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--primary-color);
+}
+
+.requirement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.requirement-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--spacing-lg);
+    background-color: rgba(255, 153, 51, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.requirement-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.requirement-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.requirement-list li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.requirement-list li:last-child {
+    border-bottom: none;
+}
+
+.requirement-list li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding: var(--spacing-lg) 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-2xl);
+    padding-left: 5rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 1.25rem;
+    top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 4px solid var(--card-bg-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-content {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary-color);
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-description {
+    color: #574544;
+    line-height: 1.6;
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-normal);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Timeline */
+@media (max-width: 767px) {
+    .timeline::before {
+        left: 1rem;
+    }
+    
+    .timeline-item {
+        padding-left: 3rem;
+    }
+    
+    .timeline-marker {
+        left: 0.5rem;
+    }
+    
+    .timeline-content {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Additional Styles for Academics Page */
+
+/* Program Category Cards */
+.program-category-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--primary-color);
+    height: 100%;
+}
+
+.program-category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.program-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--spacing-lg);
+    background-color: rgba(255, 153, 51, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.program-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.program-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.program-description {
+    color: #574544;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.program-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.program-features li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.program-features li:last-child {
+    border-bottom: none;
+}
+
+.program-features li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Curriculum Sections */
+.curriculum-section {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.subject-item {
+    padding: var(--spacing-lg);
+    background-color: rgba(255, 153, 51, 0.05);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid var(--primary-color);
+}
+
+.subject-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.subject-description {
+    color: #574544;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Methodology Cards */
+.methodology-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.methodology-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.methodology-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--spacing-lg);
+    background-color: rgba(19, 136, 8, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+.methodology-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.methodology-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.methodology-description {
+    color: #574544;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Academics Page */
+@media (max-width: 767px) {
+    .program-category-card,
+    .curriculum-section,
+    .methodology-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .program-features {
+        text-align: center;
+    }
+    
+    .program-features li {
+        text-align: left;
+    }
+}
+
+/* Additional Styles for Research Page */
+
+/* Research Area Cards */
+.research-area-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    border-top: 4px solid var(--primary-color);
+}
+
+.research-area-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.area-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: var(--spacing-lg);
+    background-color: rgba(255, 153, 51, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.area-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.area-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.area-topics {
+    list-style: none;
+    padding: 0;
+}
+
+.area-topics li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.area-topics li:last-child {
+    border-bottom: none;
+}
+
+.area-topics li::before {
+    content: '→';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Publication Cards */
+.publication-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.publication-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.publication-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto var(--spacing-lg);
+    background-color: rgba(19, 136, 8, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+.publication-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.publication-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.publication-description {
+    color: #574544;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.publication-list li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.publication-list li:last-child {
+    border-bottom: none;
+}
+
+.publication-list li::before {
+    content: '📚';
+    position: absolute;
+    left: 0;
+}
+
+/* Research Opportunities */
+.research-opportunities {
+    /* Space between items handled by margin-bottom in .opportunity-item */
+}
+
+.opportunity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    background-color: var(--card-bg-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--primary-color);
+}
+
+.opportunity-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 153, 51, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.opportunity-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.opportunity-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.opportunity-description {
+    color: #574544;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Research Page */
+@media (max-width: 767px) {
+    .research-area-card,
+    .publication-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .opportunity-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .opportunity-icon {
+        margin: 0 auto;
+    }
+}
+
+/* Additional Styles for Faculty and Student Pages */
+
+/* Faculty Cards */
+.faculty-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    text-align: center;
+    border-top: 4px solid var(--primary-color);
+}
+
+.faculty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.faculty-image {
+    margin-bottom: var(--spacing-lg);
+}
+
+.faculty-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.faculty-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.faculty-position {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.faculty-expertise {
+    color: #574544;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.faculty-qualification {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+/* Service Cards */
+.service-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: var(--spacing-lg);
+    background-color: rgba(19, 136, 8, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+.service-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+.service-list li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background-color: var(--card-bg-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    border-left: 4px solid var(--primary-color);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.testimonial-content {
+    margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #574544;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.testimonial-author {
+    border-top: 1px solid #f3f4f6;
+    padding-top: var(--spacing-md);
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.author-position {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Faculty and Student Pages */
+@media (max-width: 767px) {
+    .faculty-card,
+    .service-card,
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .faculty-image img {
+        width: 100px;
+        height: 100px;
     }
 }

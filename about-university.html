@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About University | Centre for Jain Studies | DAVV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="container nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="nav__logo" aria-label="Centre for Jain Studies - Home">
+                <img src="images/jainLogo.jpg" alt="Centre for Jain Studies Logo" class="w-12 h-12 md:w-20 md:h-20 mr-3" loading="eager">
+                <div class="logo-text flex flex-col leading-tight">
+                    <span class="font-bold text-lg md:text-2xl">Centre for Jain Studies</span>
+                    <span class="text-[10px] md:text-xs text-gray-500">Under Pradhan Mantri Jan Vikas Karyakram (PMJVK)</span>
+                    <span class="text-xs md:text-sm font-semibold">Devi Ahilya Vishwavidyalaya, Indore</span>
+                </div>
+                <img src="images/davv.jpeg" alt="Devi Ahilya Vishwavidyalaya Logo" class="w-12 h-12 md:w-20 md:h-20 ml-3" loading="eager">
+            </a>
+            <div class="nav__menu" id="nav-menu" role="menubar">
+                <ul class="nav__list" role="none">
+                    <li role="none"><a href="index.html" class="nav__link" role="menuitem" aria-label="Home Page">Home</a></li>
+                    <li role="none" class="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <button class="nav__link dropdown__toggle" aria-haspopup="true" aria-expanded="true" aria-controls="about-submenu">About</button>
+                        <ul class="dropdown__menu" id="about-submenu" role="menu" aria-label="About submenu" style="display:block;">
+                            <li role="none"><a role="menuitem" class="dropdown__item" href="about-university.html">About University</a></li>
+                            <li role="none"><a role="menuitem" class="dropdown__item" href="about-cjr.html">About CJR</a></li>
+                        </ul>
+                    </li>
+                    <li role="none"><a href="admission.html" class="nav__link" role="menuitem" aria-label="Admission Information">Admission</a></li>
+                    <li role="none"><a href="academics.html" class="nav__link" role="menuitem" aria-label="Academic Programs">Academics</a></li>
+                    <li role="none"><a href="research.html" class="nav__link" role="menuitem" aria-label="Research Activities">Research</a></li>
+                    <li role="none"><a href="faculties.html" class="nav__link" role="menuitem" aria-label="Faculty Members">Faculties</a></li>
+                    <li role="none"><a href="student-corner.html" class="nav__link" role="menuitem" aria-label="Student Resources">Student Corner</a></li>
+                </ul>
+            </div>
+            <button id="mobile-menu-button" class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Menu</span>
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h1 class="section-title mb-6">About Devi Ahilya Vishwavidyalaya</h1>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">Devi Ahilya Vishwavidyalaya (DAVV), also known as Devi Ahilya University, is a prominent public university located in Indore, Madhya Pradesh, India. Established in 1964, the university was initially known as the University of Indore and later renamed in honor of the legendary queen of the Maratha Empire, Devi Ahilya Bai Holkar, known for her contributions to society, art, and architecture.</p>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">DAVV offers a wide range of undergraduate, postgraduate, diploma, and doctoral programs across disciplines like science, arts, commerce, law, management, engineering, education, and social sciences. The university has numerous academic departments and affiliated colleges that cater to different fields of study, including technology, health sciences, and professional courses.</p>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">DAVV is accredited with an ‘A+’ grade by the National Assessment and Accreditation Council (NAAC). It consistently ranks among the top universities in India in various national rankings like the National Institutional Ranking Framework (NIRF). It has a vibrant student community with cultural events, fests, and extracurricular activities happening throughout the academic year.</p>
+                <p class="text-lg leading-relaxed text-gray-700">DAVV has collaborations with national and international institutions, facilitating academic exchange programs, research partnerships, and joint projects. Devi Ahilya University continues to be a leading educational institution in central India, fostering academic excellence and contributing to research and development across multiple fields.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container mx-auto py-12 px-4">
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Centre for Jain Studies, DAVV. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <script src="script.js" defer></script>
+</body>
+</html>
+
