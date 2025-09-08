@@ -241,6 +241,39 @@ body {
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
 
+/* Slider controls */
+.marquee-controls {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    pointer-events: none;
+}
+
+.marquee-btn {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.85);
+    border: 1px solid #e5e7eb;
+    color: var(--text-color);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.marquee-btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+.marquee-btn svg { width: 22px; height: 22px; }
+
 .announcement-box {
     background-color: var(--card-bg-color);
     padding: 1rem;
@@ -278,7 +311,72 @@ body {
     color: #6b7280;
 }
 
+/* --- Styling for Vision and Mission Section --- */
+.vision-mission-card {
+    background-color: #fffaf0;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid #fde6cc;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.07);
+    text-align: center;
+    height: 100%;
+}
+
+.card-title {
+    font-family: var(--font-heading, 'Lora', serif);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.card-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #574544;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #574544;
+}
+
+.mission-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mission-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
 /* About Section */
+/* --- Styling for the Updated "About Us" Section --- */
+.about-content p {
+    text-align: justify; /* Justifies the paragraph text */
+    line-height: 1.9;    /* Increases line spacing for better readability */
+    font-size: 1.125rem; /* Makes the font slightly larger */
+    color: #4a5568;      /* A softer text color */
+    margin-bottom: 1.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px; /* Constrains the image height to look good */
+}
+
 .info-card {
             background-color: var(--card-bg-color);
             padding: 2rem;
@@ -853,6 +951,102 @@ body {
     white-space: nowrap;
     border: 0;
 }
+
+/* --- About CJS Page Specific Styles --- */
+
+/* Styles for the two-column intro section */
+.about-cjs-text p {
+    text-align: justify;
+    line-height: 1.8;
+    color: #4a5568; /* A slightly softer text color */
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-cjs-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
+}
+
+/* Styles for the Vision and Mission cards */
+.vision-mission-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--primary-color);
+    height: 100%; /* Ensures cards have the same height */
+}
+
+.vision-mission-item p, .vision-mission-item li {
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Styles for the Core Activities grid */
+.activity-item {
+    background-color: #F9FAFB; /* A very light gray */
+    border: 1px solid #E5E7EB;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.activity-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Styles for the Thrust Areas cards */
+.thrust-item {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.thrust-item h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.thrust-item p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Styles for the Objectives grid cards */
+.objective-card {
+    background-color: #fffaf0; /* Soft off-white */
+    border: 1px solid #fde6cc; /* Saffron border */
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px; /* Gives cards a uniform height */
+    transition: all 0.2s ease-in-out;
+}
+.objective-card:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
 
 /* Additional Styles for Admission Page */
 
@@ -1561,3 +1755,4 @@ body {
         height: 100px;
     }
 }
+
