@@ -52,7 +52,7 @@
 
 @media (min-width: 768px) {
     .about-section {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
     }
     .about-section.reverse .about-image {

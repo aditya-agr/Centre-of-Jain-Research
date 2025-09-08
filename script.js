@@ -240,7 +240,7 @@ class JainStudiesApp {
 
         // Handle window resize
         window.addEventListener('resize', this.debounce(() => {
-            if (window.innerWidth >= 1024) {
+            if (window.innerWidth >= 1280) {
                 this.closeMobileMenu(mobileMenuButton, navMenu);
             }
         }, 250));
