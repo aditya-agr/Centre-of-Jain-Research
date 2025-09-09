@@ -200,78 +200,59 @@ class JainStudiesApp {
 
     /**
      * Mobile Menu Setup with Enhanced Accessibility
-     */
-    setupMobileMenu() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const navMenu = document.getElementById('nav-menu');
-
+    */
+   setupMobileMenu() {
+       const mobileMenuButton = document.getElementById('mobile-menu-button');
+       const navMenu = document.getElementById('nav-menu');
+       
+       
         if (!mobileMenuButton || !navMenu) {
             console.warn('Mobile menu elements not found');
             return;
         }
 
-        // Add click event listener
-        mobileMenuButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.toggleMobileMenu(mobileMenuButton, navMenu);
-        });
-
-        // Add keyboard support
-        mobileMenuButton.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.toggleMobileMenu(mobileMenuButton, navMenu);
-            }
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-                this.closeMobileMenu(mobileMenuButton, navMenu);
-            }
-        });
-
-        // Close menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.closeMobileMenu(mobileMenuButton, navMenu);
-            }
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', this.debounce(() => {
-            if (window.innerWidth >= 1280) {
-                this.closeMobileMenu(mobileMenuButton, navMenu);
-            }
-        }, 250));
-    }
-
-    toggleMobileMenu(button, menu) {
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        
-        if (isExpanded) {
-            this.closeMobileMenu(button, menu);
-        } else {
-            this.openMobileMenu(button, menu);
+        if (mobileMenuButton && navMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                // In a real mobile view, we would toggle a class to show/hide the menu.
+                // Since we're using Tailwind for larger screens which hides this logic,
+                // we'll prepare the logic for a custom mobile menu implementation.
+                
+                navMenu.classList.toggle('nav__menu--active');
+                
+                // For accessibility
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            });
         }
-    }
 
-    openMobileMenu(button, menu) {
-        menu.classList.add('nav__menu--active');
-        button.setAttribute('aria-expanded', 'true');
-        button.setAttribute('aria-label', 'Close navigation menu');
-        
-        // Focus first menu item
-        const firstMenuItem = menu.querySelector('.nav__link');
-        if (firstMenuItem) {
-            firstMenuItem.focus();
-        }
-    }
-
-    closeMobileMenu(button, menu) {
-        menu.classList.remove('nav__menu--active');
-        button.setAttribute('aria-expanded', 'false');
-        button.setAttribute('aria-label', 'Open navigation menu');
+        // A simple fix for Tailwind's `hidden` class in case it gets stuck on resize
+        // This is more complex with Tailwind, so we'll add a CSS class for mobile menu
+        // And let CSS handle the display property.
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @media (max-width: 1023px) {
+                .nav__menu {
+                    display: none;
+                    position: absolute;
+                    top: 70px; /* height of navbar */
+                    left: 0;
+                    right: 0;
+                    background-color: white;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    padding: 1rem;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+                .nav__menu--active {
+                    display: flex;
+                }
+                .nav__list {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     }
 
     /**
