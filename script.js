@@ -530,7 +530,7 @@ const app = new JainStudiesApp();
 window.JainStudiesApp = app;
 
 // Add CSS for focus indicators and animations
-    const style = document.createElement('style');
+const style = document.createElement('style');
 style.textContent = `
     .skip-link {
         position: absolute;
