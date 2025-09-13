@@ -75,15 +75,5 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     document.head.appendChild(style);
 
-    // Collapsible Committee Section
-    const committeeToggle = document.querySelector('.collapsible-toggle');
-    const committeeContent = document.querySelector('.collapsible-content');
-
-    if (committeeToggle && committeeContent) {
-        committeeToggle.addEventListener('click', () => {
-            committeeToggle.classList.toggle('open');
-            committeeContent.classList.toggle('open');
-        });
-    }
 });
 
