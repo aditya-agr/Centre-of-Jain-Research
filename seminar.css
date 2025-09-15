@@ -204,32 +204,42 @@
     left: 0.5rem;
 }
 
-/* Speaker Cards */
-.speaker-card {
-    text-align: center;
-    transition: transform 0.3s ease;
+/* --- Styling for the Guest & Speaker List --- */
+.guest-list-grid {
+    display: grid;
+    /* This creates a responsive grid that shows 1, 2, or 3 columns depending on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem; /* This is the space between each guest item */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.speaker-card:hover {
-    transform: scale(1.05);
+.guest-item {
+    background-color: #fffaf0; /* A soft, warm off-white background */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--primary-color); /* Thematic saffron accent on the left */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.speaker-card img {
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.guest-item:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.speaker-card h3 {
+.guest-item h3 {
+    font-family: var(--font-heading, 'Lora', serif);
+    font-size: 1.25rem;
     font-weight: 600;
-    font-size: 1.125rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
 }
 
-.speaker-card p {
-    font-size: 0.875rem;
-    color: #6b7280;
+.guest-item p {
+    color: #574544; /* A slightly softer brown for the description */
+    line-height: 1.6;
 }
-
 /* Collapsible Organizing Committee */
 .collapsible-toggle {
     cursor: pointer;
