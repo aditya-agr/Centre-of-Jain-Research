@@ -288,7 +288,7 @@ body {
     position: absolute;
     inset: 0;
     padding: 1rem 0;
-    animation: scroll-up 20s linear infinite;
+    animation: scroll-up 40s linear infinite;
     list-style: none;
     margin: 0;
 }
@@ -1517,9 +1517,9 @@ body {
 }
 
 /* Research Opportunities */
-.research-opportunities {
-    /* Space between items handled by margin-bottom in .opportunity-item */
-}
+/* .research-opportunities {
+    Space between items handled by margin-bottom in .opportunity-item
+} */
 
 .opportunity-item {
     display: flex;
